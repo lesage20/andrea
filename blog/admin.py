@@ -25,10 +25,7 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display_links = ["name"]
     ordering = ['name']
     list_per_page = 10
-    fieldsets = [
-                ("Info CategorieArticle", {"fields":["user", 'name', 'image', 'description']}),
-                ("Standard", {"fields":['status']})
-                ]
+    
 
     def image_view(self,obj):
         return mark_safe('<img src="{url}" width=100 height=50>'.format(url=obj.image.url))
@@ -42,10 +39,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display_links = ["name"]
     ordering = ['name']
     list_per_page = 10
-    fieldsets = [
-                ("Info CategorieArticle", {"fields":['name']}),
-                ("Standard", {"fields":['status']})
-                ]
+
     def image_view(self,obj):
         return mark_safe('<img src="{url}" width=100 height=50>'.format(url=obj.image.url))
 
@@ -73,10 +67,7 @@ class CommentAdmin(admin.ModelAdmin):
     list_display_links = ["name"]
     ordering = ['name']
     list_per_page = 10
-    fieldsets = [
-                ("Info CategorieArticle", {"fields":['name', 'comment', "article"]}),
-                ("Standard", {"fields":['status']})
-                ]
+
 
 admin.site.register(models.Comment, CommentAdmin)
 
