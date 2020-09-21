@@ -43,13 +43,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # re_path(r'^doc(?P<format>\.json|\.yaml)$',
     #         schema_view.without_ui(cache_timeout=0), name='schema-json'),
-    path('doc/', schema_view.with_ui('swagger', cache_timeout=0),
+    path('api/doc/', schema_view.with_ui('swagger', cache_timeout=0),
          name='schema-swagger-ui'),  #<-- Here
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-redoc'),  #<-- Here
     # path('api/', include("api.urls")),
     path('blog/', include("blog.urls")),
-    path('website/', include("website.urls")),
+    path('', include("website.urls")),
     path("graphql/", GraphQLView.as_view(graphiql=True)),
 ]
 
