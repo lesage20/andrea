@@ -14,7 +14,7 @@ router.register('comments', CommentViewSet)
 urlpatterns = [
     path('fashion', views.fashion, name='fashion'),
     path('travel', views.travel, name='travel'),
-    path('single', views.single, name='single'),
+    path('single/<slug:slug>', views.single, name='single'),
     
 ]
 

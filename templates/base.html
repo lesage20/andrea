@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Andrea - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Andrea - Sage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css'%}" >
     <link rel="stylesheet" href="{% static 'css/icomoon.css'%}" >
     <link rel="stylesheet" href="{% static 'css/style.css'%}" >
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
   </head>
   <body>
 
@@ -46,12 +48,12 @@
             </nav>
             
             <div class="colorlib-footer">
-				<h1 id="colorlib-logo" class="mb-5"><a href="{% url 'index' %} " style="background-image: url(images/bg_1.jpg);">Andrea <span>Moore</span></a></h1>
-				<p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				<h1 id="colorlib-logo" class="mb-5"><a href="{% url 'index' %} " style="background-image: url(/static/images/bg_1.jpg);">Andrea <span>Moore</span></a></h1>
+				<p class="pfooter">
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script>  SAGE
+	  </p>
 			</div>
-        </aside> <!-- END COLORLIB-ASIDE -->
+        </aside> 
         
         
         {% block content %}
@@ -77,7 +79,16 @@
   <script src="{% static 'js/scrollax.min.js'%} "></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{% static 'js/google-map.js'%} "></script>
+
+
+  <!-- <script src="{% static 'js/vue.js'%} "></script> -->
+
   <script src="{% static 'js/main.js'%} "></script>
+  
+  {% block vuescript %}
+    
+  {% endblock vuescript %}
+    
     
   </body>
 </html>
